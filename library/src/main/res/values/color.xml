@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rc_divider_color">#d9d9d9</color>
+    <color name="rc_emoji_grid_item_bg">#ebebeb</color>
+</resources>
