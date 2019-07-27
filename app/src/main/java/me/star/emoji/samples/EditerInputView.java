@@ -13,10 +13,6 @@ import android.widget.TextView;
 
 import me.star.emoji.utils.EmojiHelper;
 
-/**
- * Created by xiyouquan on 17-7-15.
- */
-
 public class EditerInputView extends FrameLayout {
     public static final int REQ_CODE_SELECT_FRIEND = 0X0001;
 
@@ -36,15 +32,6 @@ public class EditerInputView extends FrameLayout {
     TextView commentCount;
     View emoji_container;
     boolean canAt = false;
-
-    public void enableAt() {
-//        at = new At(mComment, () -> {
-//            if (mCommentLister != null) {
-//                mCommentLister.onAtInput(REQ_CODE_SELECT_FRIEND);
-//            }
-//        });
-    }
-
 
     public void setCommentLister(EditerInputView.CommentLister mCommentLister) {
         this.mCommentLister = mCommentLister;
@@ -139,46 +126,10 @@ public class EditerInputView extends FrameLayout {
     }
 
 
-//    private AtInfo getAtInfo() {
-//        if (at == null) {
-//            return null;
-//        }
-//        AtInfo atInfo = null;
-//        if (at.getAllBean() != null && at.getAllBean().size() > 0) {
-//            atInfo = new AtInfo();
-//            ArrayList<At.atBean> datas = at.getAllBean();
-//            List<String> mentionIds = new ArrayList<>(datas.size());
-//            for (At.atBean bean : datas) {
-//                mentionIds.add(((EditerInputView.FriendAtBean) bean).userInfo.getObjectId());
-//            }
-//            atInfo.setMentionList(mentionIds);
-//        }
-//        return atInfo;
-//    }
-
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != Activity.RESULT_OK || requestCode != REQ_CODE_SELECT_FRIEND) {
             return;
         }
-//        ArrayList<UserInfo> atFriends = (ArrayList<UserInfo>) data.getSerializableExtra(SelectFriendsActivity.KEY_SELECT_FRIENDS_LIST);
-//        ArrayList<At.atBean> result = new ArrayList<>(atFriends.size());
-//        for (final UserInfo atFriend : atFriends) {
-//            CommentInputView.FriendAtBean bean = new CommentInputView.FriendAtBean(atFriend);
-//            result.add(bean);
-//        }
-//        at.addPositions(result);
     }
 
-//    static class FriendAtBean implements At.atBean {
-//        private UserInfo userInfo;
-//
-//        public FriendAtBean(UserInfo userInfo) {
-//            this.userInfo = userInfo;
-//        }
-//
-//        @Override
-//        public String showOnEditText() {
-//            return userInfo.getNickName();
-//        }
-//    }
 }
