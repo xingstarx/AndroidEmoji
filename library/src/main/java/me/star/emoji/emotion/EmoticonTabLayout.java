@@ -50,6 +50,11 @@ public class EmoticonTabLayout {
 
         }
     };
+    private String mUserId;
+
+    public void setUserId(String userId) {
+        this.mUserId = userId;
+    }
 
     public EmoticonTabLayout() {
     }
@@ -257,6 +262,7 @@ public class EmoticonTabLayout {
         }
 
         this.mAdapter = new EmoticonTabLayout.TabPagerAdapter();
+        this.mAdapter.setUserId(mUserId);
         this.mViewPager.setAdapter(this.mAdapter);
         this.mViewPager.setOffscreenPageLimit(6);
         this.mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -336,6 +342,7 @@ public class EmoticonTabLayout {
     }
 
     private class TabPagerAdapter extends PagerAdapter {
+        private String userId;
         private TabPagerAdapter() {
         }
 
@@ -345,7 +352,7 @@ public class EmoticonTabLayout {
 
         public View instantiateItem(ViewGroup container, int position) {
             IEmoticonTab tab = EmoticonTabLayout.this.getTab(position);
-            View view = tab.obtainTabPager(container.getContext());
+            View view = tab.obtainTabPager(container.getContext(), userId);
             if (view.getParent() == null) {
                 container.addView(view);
             }
@@ -364,6 +371,10 @@ public class EmoticonTabLayout {
 
         public int getItemPosition(Object object) {
             return -2;
+        }
+
+        public void setUserId(String userId) {
+            this.userId = userId;
         }
     }
 }

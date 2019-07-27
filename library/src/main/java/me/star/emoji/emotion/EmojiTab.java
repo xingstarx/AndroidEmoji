@@ -44,7 +44,11 @@ public class EmojiTab implements IEmoticonTab {
     }
 
     public View obtainTabPager(Context context) {
-//        this.mUserId = RongIMClient.getInstance().getCurrentUserId();
+        return this.initView(context);
+    }
+
+    public View obtainTabPager(Context context, String userId) {
+        this.mUserId = userId;
         return this.initView(context);
     }
 

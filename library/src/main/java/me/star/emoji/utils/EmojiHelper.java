@@ -31,6 +31,11 @@ public class EmojiHelper implements TextWatcher {
     private View child;
     private int start;
     private int count;
+    private String mUserId;
+
+    public void setUserId(String userId) {
+        this.mUserId = userId;
+    }
 
     public EmojiHelper(Context context, View view, int editRes, int imgRes, int emojiContainer) {
         this.context = context;
@@ -100,7 +105,7 @@ public class EmojiHelper implements TextWatcher {
                         return;
                     }
                     mEmojiPager = new EmojiTab();
-                    child = mEmojiPager.obtainTabPager(EmojiHelper.this.context);
+                    child = mEmojiPager.obtainTabPager(EmojiHelper.this.context, mUserId);
                     mEmojiContainer.addView(child);
                     mEmojiPager.setOnItemClickListener(new IEmojiItemClickListener() {
                         @Override

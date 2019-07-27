@@ -9,5 +9,7 @@ public interface IEmoticonTab {
 
     View obtainTabPager(Context context);
 
+    View obtainTabPager(Context context, String userId);
+
     void onTableSelected(int position);
 }
