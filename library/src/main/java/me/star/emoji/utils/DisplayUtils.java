@@ -7,10 +7,6 @@ import android.util.TypedValue;
 import android.view.WindowManager;
 
 
-/**
- * Created by zcm on 17-3-14.
- */
-
 public class DisplayUtils {
     private static Context context = AppUtils.application;
     private float picHHeight;

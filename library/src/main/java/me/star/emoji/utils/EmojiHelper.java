@@ -16,10 +16,6 @@ import me.star.emoji.R;
 import me.star.emoji.emotion.EmojiTab;
 import me.star.emoji.emotion.IEmojiItemClickListener;
 
-/**
- * Created by alexlee on 2016/12/7.
- */
-
 public class EmojiHelper implements TextWatcher {
     private static final String TAG = "EmojiHelper";
     private EditText mEdit;

@@ -23,10 +23,6 @@ import me.star.emoji.R;
 import me.star.emoji.utils.DisplayUtils;
 
 
-/**
- * Created by alexlee on 2017/9/19.
- */
-
 public class EmoticonTabLayout {
     private View mContainer;
     private IEmoticonTab mCurrentTab;
