@@ -7,5 +7,4 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:paddingTop="26dp"
-    android:listSelector="@drawable/rc_emoji_grid_item_selector"
     android:verticalSpacing="14dp"/>
